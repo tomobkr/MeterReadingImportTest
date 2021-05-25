@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.EntityFrameworkCore;
 using MeterReadingImport.Repository.DbContexts;
+using MeterReadingImport.Service.Interfaces.MeterReadingImport;
 
 namespace MeterReadingImport
 {
@@ -29,8 +30,10 @@ namespace MeterReadingImport
         {
             services.AddDbContext<MeterReadingImportDbContext>(options =>
                             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("MeterReadingImport.Repository")));
-                            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-                            //,x => x.MigrationsAssembly("MeterReadingImport.Repository")));
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //,x => x.MigrationsAssembly("MeterReadingImport.Repository")));
+
+            services.AddTransient<IUploadService, IUploadService>();
 
             services.AddControllers();
 

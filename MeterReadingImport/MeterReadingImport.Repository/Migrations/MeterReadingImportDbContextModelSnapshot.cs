@@ -19,7 +19,7 @@ namespace MeterReadingImport.Repository.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MeterReadingImport.Domain.Entities.Account", b =>
+            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReadingImport.Account", b =>
                 {
                     b.Property<long>("AccountId")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace MeterReadingImport.Repository.Migrations
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReading", b =>
+            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReadingImport.MeterReading", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

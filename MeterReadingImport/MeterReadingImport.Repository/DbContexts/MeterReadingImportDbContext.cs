@@ -1,10 +1,6 @@
-﻿using MeterReadingImport.Domain.Entities;
+﻿using MeterReadingImport.Domain.Entities.MeterReadingImport;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace MeterReadingImport.Repository.DbContexts
 {

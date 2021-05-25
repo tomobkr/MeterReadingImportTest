@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MeterReadingImport.Domain\MeterReadingImport.Domain.csproj" />
     <ProjectReference Include="..\MeterReadingImport.Repository\MeterReadingImport.Repository.csproj" />
+    <ProjectReference Include="..\MeterReadingImport.Service\MeterReadingImport.Service.csproj" />
   </ItemGroup>
 
 

@@ -20,4 +20,9 @@
     <ProjectReference Include="..\MeterReadingImport.Domain\MeterReadingImport.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="SeedData\" />
+  </ItemGroup>
+
 </Project>

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeterReadingImport.Repository.Migrations
 {
     [DbContext(typeof(MeterReadingImportDbContext))]
-    [Migration("20210525154723_InitialModel")]
+    [Migration("20210525162709_InitialModel")]
     partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace MeterReadingImport.Repository.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MeterReadingImport.Domain.Entities.Account", b =>
+            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReadingImport.Account", b =>
                 {
                     b.Property<long>("AccountId")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace MeterReadingImport.Repository.Migrations
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReading", b =>
+            modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReadingImport.MeterReading", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
