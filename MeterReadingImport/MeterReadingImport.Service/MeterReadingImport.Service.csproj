@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MeterReadingImport.Domain\MeterReadingImport.Domain.csproj" />
     <ProjectReference Include="..\MeterReadingImport.Repository\MeterReadingImport.Repository.csproj" />
   </ItemGroup>

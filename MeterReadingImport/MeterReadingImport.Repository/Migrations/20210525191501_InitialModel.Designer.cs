@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeterReadingImport.Repository.Migrations
 {
     [DbContext(typeof(MeterReadingImportDbContext))]
-    [Migration("20210525162709_InitialModel")]
+    [Migration("20210525191501_InitialModel")]
     partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,10 +23,13 @@ namespace MeterReadingImport.Repository.Migrations
 
             modelBuilder.Entity("MeterReadingImport.Domain.Entities.MeterReadingImport.Account", b =>
                 {
-                    b.Property<long>("AccountId")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AccountId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
@@ -34,7 +37,7 @@ namespace MeterReadingImport.Repository.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AccountId");
+                    b.HasKey("Id");
 
                     b.ToTable("Accounts");
                 });
