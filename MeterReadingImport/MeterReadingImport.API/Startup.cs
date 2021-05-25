@@ -28,8 +28,9 @@ namespace MeterReadingImport
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MeterReadingImportDbContext>(options =>
-                            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")),
-                            ServiceLifetime.Scoped);
+                            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("MeterReadingImport.Repository")));
+                            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                            //,x => x.MigrationsAssembly("MeterReadingImport.Repository")));
 
             services.AddControllers();
 

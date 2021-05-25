@@ -12,6 +12,8 @@ namespace MeterReadingImport.Repository.DbContexts
     {
         private IConfiguration _config;
 
+        public MeterReadingImportDbContext() { }
+
         public MeterReadingImportDbContext(DbContextOptions<MeterReadingImportDbContext> options, IConfiguration config) : base(options)
         {
             _config = config;
