@@ -34,7 +34,7 @@ namespace MeterReadingImport.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> SeedAccountData(IFormFile file)
         {
-            var ViewModel = await _uploadService.SeedAccountInformation(file);
+            await _uploadService.SeedAccountInformation(file);
 
             return Ok();
         }

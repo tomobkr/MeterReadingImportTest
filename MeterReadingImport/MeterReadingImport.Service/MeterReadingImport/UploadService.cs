@@ -67,7 +67,7 @@ namespace MeterReadingImport.Service.MeterReadingImport
         //Given more time, this should be seeded directly into the DB on the initial migration using the file in MeterReadingImport.Repository.SeedData.Test_Accounts.csv
         //As we can be sure of the data schema as we own the seed file, i have no entered any data integrity validations into this method.
         //To improve this method i would fix a bug with accountId being a string instead of long, and retrieve more field names & types through reflection where neccesary
-        public async Task<MeterReadingUploadsViewModel> SeedAccountInformation(IFormFile file)
+        public async Task SeedAccountInformation(IFormFile file)
         {
             var dt = new DataTable();
 
@@ -97,7 +97,8 @@ namespace MeterReadingImport.Service.MeterReadingImport
                     await bcp.WriteToServerAsync(dt);
                 }
             }
-            return null;
+
+            return;
         }
 
 

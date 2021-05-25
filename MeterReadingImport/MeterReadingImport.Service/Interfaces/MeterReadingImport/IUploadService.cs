@@ -10,7 +10,7 @@ namespace MeterReadingImport.Service.Interfaces.MeterReadingImport
     public interface IUploadService
     {
         Task<MeterReadingUploadsViewModel> UploadMeterReads(IFormFile file);
-        Task<MeterReadingUploadsViewModel> SeedAccountInformation(IFormFile file);
+        Task SeedAccountInformation(IFormFile file);
 
     }
 }
