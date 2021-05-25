@@ -13,7 +13,7 @@ namespace MeterReadingImport.Repository.DbContexts
             _config = config;
         }
 
-        //TODO: Not needed?
+        //Possibly not needed as we are implementing this in Startup.cs
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
