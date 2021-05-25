@@ -50,8 +50,8 @@ namespace MeterReadingImport.Repository.Migrations
                     b.Property<long>("AccountId")
                         .HasColumnType("bigint");
 
-                    b.Property<float>("MeterReadValue")
-                        .HasColumnType("real");
+                    b.Property<string>("MeterReadValue")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("MeterReadingDate")
                         .HasColumnType("datetime2");

@@ -29,7 +29,7 @@ namespace MeterReadingImport.Repository.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MeterReadingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    MeterReadValue = table.Column<float>(type: "real", nullable: false),
+                    MeterReadValue = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AccountId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>

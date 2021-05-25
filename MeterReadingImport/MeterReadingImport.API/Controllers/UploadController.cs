@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MeterReadingImport.Domain.ViewModels.MeterReadingImport.UploadController;
+﻿using MeterReadingImport.Domain.ViewModels.MeterReadingImport.UploadController;
 using MeterReadingImport.Service.Interfaces.MeterReadingImport;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace MeterReadingImport.Controllers
 {
@@ -28,7 +25,7 @@ namespace MeterReadingImport.Controllers
         {
             var ViewModel = await _uploadService.UploadMeterReads(file);
 
-            return Ok(new MeterReadingUploadsViewModel());
+            return Ok(ViewModel);
         }
 
         [Route("seed-accounts")]

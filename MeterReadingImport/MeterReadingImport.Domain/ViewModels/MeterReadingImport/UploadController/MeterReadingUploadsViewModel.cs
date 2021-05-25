@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MeterReadingImport.Domain.ViewModels.MeterReadingImport.UploadController
+﻿namespace MeterReadingImport.Domain.ViewModels.MeterReadingImport.UploadController
 {
     public class MeterReadingUploadsViewModel
     {

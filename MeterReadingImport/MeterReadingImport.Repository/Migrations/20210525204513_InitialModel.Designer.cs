@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeterReadingImport.Repository.Migrations
 {
     [DbContext(typeof(MeterReadingImportDbContext))]
-    [Migration("20210525191501_InitialModel")]
+    [Migration("20210525204513_InitialModel")]
     partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,8 +52,8 @@ namespace MeterReadingImport.Repository.Migrations
                     b.Property<long>("AccountId")
                         .HasColumnType("bigint");
 
-                    b.Property<float>("MeterReadValue")
-                        .HasColumnType("real");
+                    b.Property<string>("MeterReadValue")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("MeterReadingDate")
                         .HasColumnType("datetime2");

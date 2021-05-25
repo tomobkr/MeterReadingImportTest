@@ -8,13 +8,12 @@ namespace MeterReadingImport.Repository.DbContexts
     {
         private IConfiguration _config;
 
-        public MeterReadingImportDbContext() { }
-
         public MeterReadingImportDbContext(DbContextOptions<MeterReadingImportDbContext> options, IConfiguration config) : base(options)
         {
             _config = config;
         }
 
+        //TODO: Not needed?
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
